@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/favicon2.png" type="image/png">
+    <title>Linear Ask</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div id="navWrapper" class="mx-auto d-flex">
+            <a class="navbar-brand" href="#"><img src="/image/linearLogo.png" alt="Linear Logo"></a>
+            <!-- Onclick toggle out  pf aup next -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Features
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="#">Method</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="#">Customers</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="#">Changelog</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item mx-2 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Company
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <button id="signUp" class="mx-2" type="button">Sign Up</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="intro" class="mt-5 container">
+        <img src="/image/LinearFlow.png" class="position-relative start-50 translate-middle-x" alt="Slack - A - Linear">
+        <h5 class="text-center">LINEAR ASKS</h5>
+        <h4>Turn Slack requests <br>into actionable issues</h4>
+        <p class="text-center">Linear Asks is the easiest way to create and manage workplace requests. <br>Streamline bug reports, feature ideas, IT tickets, HR requests, and more.</p>
+
+        <div class="video-container">
+            <video id="myVideo" src="/image/LinearVid.mp4" preload="metadata"></video>
+            <button class="play-button" onclick="togglePlay()"><img src="/image/PlayIcon.png" alt="Play Icon" class="pe-2">See how it works</button>
+        </div>
+        
+        <h4 class="text-center">Create request in Slack. <br>Manage them in Linear.</h4>
+        <p class="text-center">Linear Ask is a new take on intake. Submit requests directly <br>from slack and automatically send them to the relevant team in <br>Linear. Eliminate clusttered channels and reduce context switching.</p>
+    </section>
+    <section id="slack" class="mt-5">
+        <header class="secHeader">
+            <h6 class="pb-2"><img src="/image/slackLogo.png" alt="Slack Logo">Slack</h6>
+        </header>
+        <div id="slackContent1" class="mb-5">
+            <div class="row slack-text">
+                <div class="col-12 col-md-6">
+                    <h5>Work where you team <br>already is. In Slack.</h5>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Let everyone in your slack workspace turn their requests into Linear issues - even if they don't have a Linear account.</p>
+                </div>
+            </div>
+            <section class="row gap-3 mt-5" id="grid1">
+                <div class="col-12 col-md-7 rounded-3"></div>
+                <div class="col-12 col-md-5 rounded-3"></div>
+                <div class="col-12 col-md-6 rounded-3"></div>
+                <div class="col-12 col-md-6 rounded-3"></div>
+            </section>
+        </div>
+    </section>
+    <section id="Linear" class="mt-5">
+        <header class="secHeader">
+            <h6 class="pb-2"><img src="/image/LinearIcon.png" alt="Linear Logo">  Linear</h6>
+        </header>
+        <div id="slackContent1" class="mb-5">
+            <div class="row slack-text">
+                <div class="col-12 col-md-6">
+                    <h5>Respond to requests <br>faster than ever before.</h5>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Let everyone in your slack workspace turn their requests into Linear issues - even if they don't have a Linear account.</p>
+                </div>
+            </div>
+            <section class="row gap-3 mt-5" id="grid2">
+                <div class="col-12 col-md-7 rounded-3"></div>
+                <div class="col-12 col-md-5 rounded-3"></div>
+                <div class="col-12 col-md-6 rounded-3"></div>
+                <div class="col-12 col-md-6 rounded-3"></div>
+                <div class="col-12 mx-auto rounded-3"></div>
+            </section>
+        </div>
+    </section>
+    <section id="Workflows" class="mt-5">
+        <header class="secHeader">
+            <h6 class="pb-2"><img src="/image/WorkflowsIcon.png" alt="Workflows icon">  Workflows</h6>
+        </header>
+        <div id="slackContent1" class="mb-5">
+            <div class="row slack-text">
+                <div class="col-12 col-md-6">
+                    <h5>Create powerful pro workflows.</h5>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Advanced features like SLAs, Triage, and Linear Insights unlock new level of control over your request workflows.</p>
+                </div>
+            </div>
+            <section class="row gap-3 mt-5" id="grid3">
+                <div class="col-12 col-md-7 rounded-3"></div>
+                <div class="col-12 col-md-5 rounded-3"></div>
+                <div class="col-12 rounded-3"></div>
+            </section>
+        </div>
+    </section>
+    <section id="usage">
+        <header class="text-center">
+            <h1>How teams use Linear Asks</h1>
+            <p class="mt-4">Linear Asks supports all kind of workplace requests.<br>From engineering and design to IT, legal, and HR.</p>
+        </header>
+        <section id="flex1wrapper">
+            <div class="d-flex justify-content-center flex-column flex-md-row text-center" id="flex1">
+                <div class="d-flex flex-column">
+                    <div class="p-5 m-2 rounded-3  small-sized flex-item">
+                        <h6 class="py-3">Streamline bug reporting</h6>
+                        <p>Enable people outside of engineering to quickly file bug reports without worrying about complex details</p>
+                    </div>
+                    <div class="p-5 m-2 rounded-3  large-sized flex-item">
+                        <h6 class="py-3">Standardize Ops requests</h6>
+                        <p>Configure templates with concrete instructions, placeholders, and checkboxes to standardize and streamline intakes.</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="p-5 m-2 rounded-3  large-sized flex-item">
+                        <h6 class="py-3">Build an IT help desk</h6>
+                        <p>Turn any message in your #ask-IT channek into an IT ticket by reacting with ☺ emoji</p>
+                    </div>
+                    <div class="p-5 m-2 rounded-3  small-sized flex-item">
+                        <h6 class="py-3">Improve customer success</h6>
+                        <p>Add Linear Asks to shared Slack channels to enable your most important customers to file bug reports and feature requests.</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="p-5 m-2 rounded-3  large-sized flex-item">
+                        <h6 class="py-3">Centralize data request intake</h6>
+                        <p>Manage requests and questions to your Data Science team more efficiently.</p>
+                    </div>
+                    <div class="p-5 m-2 rounded-3  small-sized flex-item">
+                        <h6 class="py-3">Manage sensitive HR tickets</h6>
+                        <p>Create private Asks via DM for sensitive requests that only you and your HR team can access.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="trial" class="text-center">
+        <img src="/image/Ask1.png" class="my-5" alt="Ask Logo">
+        <h1 class="mt-5 mb-4">Activate Linear Asks <br>for your team</h1>
+        <p class="mb-5">Linear Asks is available for Plus plan workspaces. <br>Get a 30 day free trial to see if Asks is for you.</p>
+        <button class="mt-4 rounded-pill px-2 py-1">Try 1 month free</button>
+        <dd class="pt-3 mb-5">New Plus subscribers only.</dd>
+    </section> 
+    <footer>
+        <div class="container">
+            <div class="row">
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <h6 class="footerHeaders" id="LinearFooter"><img src="/image/favicon2.png" alt="Linear Logo" class="pe-3">Linear – Designed Worldwide</h6>
+                <div id="footersocials" class="mt-3 d-flex align-items-end">
+                    <a href="#" class="footer-icon"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="footer-icon"><i class="bi bi-github"></i></a>
+                    <a href="#" class="footer-icon"><i class="bi bi-slack"></i></a>
+                    <a href="#" class="footer-icon"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>      
+            <div class="col-12 col-md-9">
+                <div class="row">
+                <div class="col-6 col-md-3">
+                    <h6 class="footerHeaders">Product</h6>
+                    <ul class="list-unstyled mt-2">
+                    <li><a class="footerItems" href="#">Features</a></li>
+                    <li><a class="footerItems" href="#">Integrations</a></li>
+                    <li><a class="footerItems" href="#">Pricing</a></li>
+                    <li><a class="footerItems" href="#">Changelog</a></li>
+                    <li><a class="footerItems" href="#">Docs</a></li>
+                    <li><a class="footerItems" href="#">Linear Method</a></li>
+                    <li><a class="footerItems" href="#">Download</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="footerHeaders">Company</h6>
+                    <ul class="list-unstyled mt-2">
+                    <li><a class="footerItems" href="#">About us</a></li>
+                    <li><a class="footerItems" href="#">Blog</a></li>
+                    <li><a class="footerItems" href="#">Careers</a></li>
+                    <li><a class="footerItems" href="#">Customers</a></li>
+                    <li><a class="footerItems" href="#">Brand</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="footerHeaders">Resources</h6>
+                    <ul class="list-unstyled mt-2">
+                    <li><a class="footerItems" href="#">Startup Program</a></li>
+                    <li><a class="footerItems" href="#">Community</a></li>
+                    <li><a class="footerItems" href="#">Contact</a></li>
+                    <li><a class="footerItems" href="#">DPA</a></li>
+                    <li><a class="footerItems" href="#">Privacy Policy</a></li>
+                    <li><a class="footerItems" href="#">Terms of service</a></li>
+                    <li><a class="footerItems" href="#">Report a vulnerability</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="footerHeaders">Developers</h6>
+                    <ul class="list-unstyled mt-2">
+                    <li><a class="footerItems" href="#">API</a></li>
+                    <li><a class="footerItems" href="#">Status</a></li>
+                    <li><a class="footerItems" href="#">GitHub</a></li>
+                    <li><a class="footerItems" href="#">README</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+    function togglePlay() {
+        const video = document.getElementById('myVideo');
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+        }          
+    </script>
+</body>
+</html>
