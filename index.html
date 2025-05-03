@@ -11,6 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -73,8 +76,8 @@
         <h4>Turn Slack requests <br>into actionable issues</h4>
         <p class="text-center">Linear Asks is the easiest way to create and manage workplace requests. <br>Streamline bug reports, feature ideas, IT tickets, HR requests, and more.</p>
 
-        <div class="video-container">
-            <video id="myVideo" src="/image/LinearVid.mp4" preload="metadata"></video>
+        <div class="video-container rounded-3">
+            <video id="myVideo" src="/image/LinearVid.mp4" onclick="toggleDisplay()" preload="metadata"></video>
             <button class="play-button" onclick="togglePlay()"><img src="/image/PlayIcon.png" alt="Play Icon" class="pe-2">See how it works</button>
         </div>
         
@@ -95,10 +98,50 @@
                 </div>
             </div>
             <section class="row gap-3 mt-5" id="grid1">
-                <div class="col-12 col-md-7 rounded-3"></div>
-                <div class="col-12 col-md-5 rounded-3"></div>
-                <div class="col-12 col-md-6 rounded-3"></div>
-                <div class="col-12 col-md-6 rounded-3"></div>
+                <div class="col-12 col-sm-7 rounded-3 container">
+                    <div id="slackImgContainer1" class="row py-3">
+                        <div class="col-12 col-md-5 my-auto ps-4">
+                            <h6 class="whitetext gridSmallText">Templates</h6>
+                            <h4 class="lightbluetext gridLargeText">Create custom templates for different Slack channels.</h4>
+                        </div>
+                        <div class="col-12 col-md-7 d-flex justify-content-center align-items-center">
+                            <img class="slack1" src="/image/slack1.png" alt="Bug report">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-5 rounded-3">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="/image/slack2.png" style="width: 100%;" alt="Privacy">
+                        </div>
+                        <div class="col-12">
+                            <h6 class="lightbluetext gridSmallText px-5 pt-1">Private Ask</h6>
+                            <h4 class="whitetext gridLargeText px-5">Create private ask via DM for sensitive requests.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 rounded-3">
+                    <div class="row pb-4">
+                        <div class="col-12 text-center py-4">
+                            <img src="/image/slack3.png" class="slack1 slack2" alt="Privacy">
+                        </div>
+                        <div class="col-12 pe-5">
+                            <h6 class="lightbluetext gridSmallText px-5 pt-1">Automation Triggers</h6>
+                            <h4 class="whitetext gridLargeText px-5">Turn any message into an Ask simply by using emoji.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 rounded-3">
+                    <div class="row pb-4">
+                        <div class="col-12 text-center py-4">
+                            <img src="/image/slack4.png" class="slack2" alt="Privacy">
+                        </div>
+                        <div class="col-12 pe-5">
+                            <h6 class="lightbluetext gridSmallText px-5 pt-1">Instant Updates</h6>
+                            <h4 class="whitetext gridLargeText px-5">Get notified about comments and status updates directly in Slack.</h4>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </section>
@@ -108,19 +151,64 @@
         </header>
         <div id="slackContent1" class="mb-5">
             <div class="row slack-text">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-sm-6">
                     <h5>Respond to requests <br>faster than ever before.</h5>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-sm-6">
                     <p>Let everyone in your slack workspace turn their requests into Linear issues - even if they don't have a Linear account.</p>
                 </div>
             </div>
             <section class="row gap-3 mt-5" id="grid2">
-                <div class="col-12 col-md-7 rounded-3"></div>
-                <div class="col-12 col-md-5 rounded-3"></div>
-                <div class="col-12 col-md-6 rounded-3"></div>
-                <div class="col-12 col-md-6 rounded-3"></div>
-                <div class="col-12 mx-auto rounded-3"></div>
+                <div class="col-12 col-sm-7 rounded-3">
+                    <div class="row">
+                        <div class="col-12 text-center position-relative py-4" style="left: 20%;">
+                            <img src="/image/linear1.png" class="linear1">
+                        </div>
+                        <div class="col-12 text-start py-4 m-4">
+                            <h6 class="lightpurpletext gridSmallText pt-1">Realtime thread sync</h6>
+                            <h4 class="whitetext gridLargeText">Reply to Asks directly <br>from Linear</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-5 rounded-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-start d-flex justify-content-center flex-column">
+                            <h6 class="lightpurpletext gridSmallText pt-5">Realtime thread sync</h6>
+                            <h4 class="whitetext gridLargeText">Reply to Asks directly from Linear</h4>
+                        </div>
+                        <div class="col-12 col-sm-6 text-center">
+                            <img src="/image/linear2_2.png" class="linear1 linear1_2">
+                            <img src="/image/linear2.png" class="linear1 l linear1_1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 rounded-3 d-flex flex-column justify-content-end ps-4 pb-4">
+                    <h6 class="lightpurpletext">Build for speed</h6>
+                    <h4 class="whitetext gridLargeText">Fly through your requests with rapid-fire keyboard commands</h4>
+                </div>
+                <div class="col-12 col-sm-6 rounded-3">
+                    <div class="row">
+                        <div class="col-12 text-center position-relative py-4" style="left: 20%;">
+                            <img src="/image/linear4.png" class="linear1">
+                        </div>
+                        <div class="col-12 text-start py-4 m-4">
+                            <h6 class="lightpurpletext gridSmallText pt-1">Private teams</h6>
+                            <h4 class="whitetext gridLargeText mb-5">Control who has access to <br>sensitive requests</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mx-auto">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <img src="/image/linear5.png" class="Linear5" alt="Brand Support">
+                        </div>
+                        <div class="col-12 col-md-6 d-flex align-items-center">
+                            <article>
+                                <span id="linearSpan">"With Linear Asks we can centralize all internal request workflows</span> across hundreds of employees including legal, IT, and customer service."
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </section>
@@ -138,9 +226,34 @@
                 </div>
             </div>
             <section class="row gap-3 mt-5" id="grid3">
-                <div class="col-12 col-md-7 rounded-3"></div>
-                <div class="col-12 col-md-5 rounded-3"></div>
-                <div class="col-12 rounded-3"></div>
+                <div class="col-12 col-md-7  d-none d-sm-flex rounded-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 workflow1">
+                            <img src="/image/workflow1.png">
+                            <img src="/image/workflow1_2.png">
+                        </div>
+                        <div class="col-12 col-sm-6 ps-5 pt-4">
+                            <h5 class="whitetext">Insights <span id="workflowSpan" class="p-2">Upgraded</span></h5>
+                            <h3 class="workflowtext1">See trends around response time, workload and other reports.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 rounded-3">
+                    <img src="/image/workflow2.png">
+                    <h6>Triage Responsibility <span id="workflowSpan2">New</span></h6>
+                    <h4>Automatically assign or  notify team members.</h4>
+                </div>
+                <div class="col-12 rounded-3">
+                    <div class="row">
+                        <div class="col-12 col-md-6 text-center">
+                            <img class="w-100" src="/image/workflow3.png">
+                        </div>
+                        <div class="col-12 pb-4 col-md-6">
+                            <h6>Automatic Deadlines</h6>
+                            <h4>Apply SLAs to time-sensitive <br>Asks to communicate urgency.</h4>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </section>
@@ -254,16 +367,5 @@
         </div>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-    function togglePlay() {
-        const video = document.getElementById('myVideo');
-        if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
-        }
-        }          
-    </script>
 </body>
 </html>
